@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-4 p-4">
+    <h1 class="text-center py4">Formular Inregistrare</h1>
+    <form action="GET" action="#" name="Inregistrare Curs" class="needs-validation" novalidate onsubmit="return validare()">
+        <fieldset>
+            <legend>Date Personale</legend>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label" for="nume">Nume*</label>
+                    <input type="text" class="form-control" id="nume" name="nume" required/>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="nume">Prenume*</label>
+                    <input type="text" class="form-control" id="prenume" name="prenume" required/>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="nume">Data Nasterii*</label>
+                    <input type="date" class="form-control" id="data" name="data" required/>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Date de contact</legend>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="nr-tel" class="form-label">Numar de telefon</label>
+                    <input type="text" class="form-control" id="nr-tel" name="nr-tel">
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Adresa de e-mail</label>
+                    <input type="text" class="form-control" id="email" name="email">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Date de conectare</legend>
+            <div class="row">
+                <div class="col">
+                    <label for="uname" class="form-label">Nume de utilizator*</label>
+                    <input type="text" class="form-control" id="uname" name="uname" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="pwd" class="form-label">Parola*</label>
+                    <input type="text" class="form-control" id="pwd" name="pwd" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="cpwd" class="form-label">Confirmare parola*</label>
+                    <input type="text" class="form-control" id="cpwd" name="cpwd" required>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Cursuri de programare</legend>
+            <label>Nivelul cunostintelor de programare*</label>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="e1">
+                <label for="e1" class="form-check-label">incepator</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="e2">
+                <label for="e2" class="form-check-label">intermediar</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="e3">
+                <label for="e3" class="form-check-label">avansat</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="e4">
+                <label for="e4" class="form-check-label">master of puppets</label>
+            </div>
+            <label for="exp" class="form-label d-inline-block">Care crezi ca e nivelul tau de experienta(intre 0 si 5)?</label>
+            <input type="range" class="form-control" id="exp" name="exp" min="1" max="5">
+
+            <label>Alege-ti cursurile preferate</label>
+            <div class="form-check"><input type="checkbox" class="form-check-input" id="c1">
+                <label for="c1" class="form-check-label">Python</label>
+            </div>
+            <div class="form-check"><input type="checkbox" class="form-check-input" id="c2">
+                <label for="c2" class="form-check-label">Inteligenta artificiala</label>
+            </div>
+            <div class="form-check"><input type="checkbox" class="form-check-input" id="c3">
+                <label for="c3" class="form-check-label">C++</label>
+            </div>
+            <div class="form-check"><input type="checkbox" class="form-check-input" id="c4">
+                <label for="c4" class="form-check-label">Roboti software</label>
+            </div>
+            <div class="form-check"><input type="checkbox" class="form-check-input" id="c5">
+                <label for="c5" class="form-check-label">Programare web</label>
+            </div>
+            <div class="form-check"><input type="checkbox" class="form-check-input" id="c6">
+                <label for="c6" class="form-check-label">Retele de calculatoare</label>
+            </div>
+
+            <label>De unde ai aflat de noi?</label>
+            <select class="form-select" aria-label="select aflare">
+                <option selected>alegeti din lista o optiune</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Observatii</legend>
+            <div class="mb-3">
+                <textarea class="form-control" id="extra" rows="5"></textarea>
+            </div>
+        </fieldset>
+
+        <button class="btn btn-primary btn-large">Trimite</button>
+        <button class="btn btn-primary btn-large">Sterge</button>
+
+    </form>
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</body>
+</html>
