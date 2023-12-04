@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h1>Functii JavaScript</h1>
+<p>Apelarea unei functii care efectueaza un calcul și returneaza rezultatul:</p>
+<form action="#">
+    <label for="numar1">Primul numar</label>
+    <input type="text" name="numar1" id="numar1">
+    <br><br>
+    <label for="numar2">Al doilea numar</label>
+    <input type="text" name="numar2" id="numar2">
+    <br><br>
+    <button type="submit" id="submit-btn">Calculeaza</button>
+</form>
+<p id="produs1">Functie definita complet: </p>
+<p id="produs2">Functie definita scurt: </p>
+<p id="produs3">Functie sageata: </p>
+<script>
+    function numeFunctie(a, b) {
+        return a * b;
+    }
+    const var2 = function (a, b) { return a * b };
+    const var3 = (x, y) => x * y;
+    const btn = document.getElementById("submit-btn");
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        let nr1 = document.getElementById("numar1").value;
+        let nr2 = document.getElementById("numar2").value;
+        let produs1 = numeFunctie(nr1, nr2);
+        document.getElementById("produs1").innerHTML += produs1;
+        let produs2 = var2(nr1, nr2);
+        document.getElementById("produs2").innerHTML += produs2;
+        let produs3 = var3(nr1, nr2);
+        document.getElementById("produs3").innerHTML += produs3;
+    });
+</script>
+
+</body>
+</html>
